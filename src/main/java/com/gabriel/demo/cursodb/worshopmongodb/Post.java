@@ -6,13 +6,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
-import java.util.UUID;
 
 @Document
 public class Post implements Serializable {
     private static final long serialVersionUID = 1L;
     @Id
-    private UUID id;
+    private String id;
     private Date date;
     private String title;
     private String body;
@@ -20,18 +19,18 @@ public class Post implements Serializable {
     public Post() {
     }
 
-    public Post(UUID id, Date date, String title, String body) {
+    public Post(String id, Date date, String title, String body) {
         this.id = id;
         this.date = date;
         this.title = title;
         this.body = body;
     }
 
-    public UUID getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(UUID id) {
+    public void setId(String id) {
         this.id = id;
     }
 

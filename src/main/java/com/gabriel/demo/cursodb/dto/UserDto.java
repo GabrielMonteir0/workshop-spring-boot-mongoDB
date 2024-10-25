@@ -8,15 +8,14 @@ public class UserDto implements Serializable {
 private static final long serialVersionUID = 1l;
     private String name;
     private String email;
+    private String cpf;
 
-    public UserDto() {
-
-    }
+    public UserDto() {}
 
     public UserDto(User obj) {
         name = obj.getName();
         email = obj.getEmail();
-
+        cpf = obj.getCpf();
     }
 
     public String getName() {
@@ -31,7 +30,9 @@ private static final long serialVersionUID = 1l;
         return email;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+    public void setEmail(String email) {this.email = email;}
+
+    public String getCpf() {return cpf;}
+
+    public void setCpf(String cpf) {this.cpf = cpf;}
 }
